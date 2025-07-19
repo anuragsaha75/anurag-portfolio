@@ -37,6 +37,20 @@ export default function Portfolio() {
           className="mb-10 border-b pb-6 text-center"
           variants={sectionVariants}
         >
+          {/* 👤 Profile Image with animation */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mb-6"
+          >
+            <img
+              src="/profile.jpg"
+              alt="Anurag Saha"
+              className="w-36 h-36 sm:w-40 sm:h-40 rounded-full border-4 border-blue-600 dark:border-blue-400 shadow-lg transition-transform duration-500 hover:scale-105 hover:rotate-1 object-cover"
+            />
+          </motion.div>
+
           <h1 className="text-4xl font-extrabold text-blue-700 dark:text-blue-400">Anurag Saha</h1>
           <p className="text-md text-gray-600 dark:text-gray-300 mt-1">B.Tech CSE Student | Aspiring Software Engineer</p>
           <div className="mt-4 flex justify-center gap-6 text-blue-600 dark:text-blue-400 text-lg">
@@ -65,7 +79,7 @@ export default function Portfolio() {
               {title === "Certifications" && "📜 Certifications"}
             </h2>
             {title === "Objective" && (
-              <p>B.Tech (CSE) student seeking Google SWE Internship – Summer 2026 to apply skills in system design, algorithms, and scalable software development.</p>
+              <p>Aspiring Software Development Engineer (SDE) with a strong grasp of full-stack development, system design, and problem solving. Currently pursuing B.Tech in Computer Science, with hands-on experience in building scalable web applications, real-time systems, and microservices using MERN stack, Docker, and Kubernetes. Passionate about creating efficient, user-focused software and continuously improving through competitive programming, open-source contributions, and modern engineering practices. Seeking opportunities to contribute to impactful products while growing as a world-class developer.</p>
             )}
             {title === "Education" && (
               <ul className="list-disc ml-6 space-y-2">
@@ -76,7 +90,7 @@ export default function Portfolio() {
             {title === "Skills" && (
               <p>
                 C++, Python, Java, JavaScript, HTML, CSS, Node.js, Angular, Firebase, Git, MERN, WebSockets, Bootstrap,
-                MySQL, MongoDB, DSA, OOP, System Design, Multithreading, Linux
+                MySQL, MongoDB, DSA, OOP, System Design, Multithreading, Linux, Docker, Kubernetes
               </p>
             )}
             {title === "Projects" && (
@@ -97,7 +111,7 @@ export default function Portfolio() {
             {title === "Achievements" && (
               <ul className="list-disc ml-6 space-y-2">
                 <li>Top 5 – Clash of Coders, Adamas University</li>
-                <li>GitHub contributor & CP participant (LeetCode, Codeforces)</li>
+                <li>CP participant (LeetCode, Codeforces)</li>
                 <li>Finalist – NASA Space Apps Challenge (climate-tech project)</li>
               </ul>
             )}
